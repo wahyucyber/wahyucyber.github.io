@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer utilities {
+    body, html {
+        @apply scroll-smooth;
+    }
+
     nav #hamburger.active > span:nth-child(1) {
         @apply rotate-45 origin-top-left;
     }
