@@ -4,7 +4,7 @@
 
 @layer utilities {
     body, html {
-        @apply scroll-smooth;
+        @apply scroll-smooth overflow-x-hidden;
     }
 
     nav #hamburger.active > span:nth-child(1) {
