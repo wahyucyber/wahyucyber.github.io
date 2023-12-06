@@ -36,3 +36,21 @@ $(document).on(`click`, `#back-to-top`, function() {
     $(window).scrollTop(0)
 })
 /* Back to top end */
+
+/* Dark or light mode start */
+if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark')
+} else {
+    document.documentElement.classList.remove('dark')
+}
+
+$(document).on(`click`, `#dark-or-light`, function() {
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        localStorage.theme = 'light'
+        $(`html`).removeClass(`dark`)
+    } else {
+        $(`html`).addClass(`dark`)
+        localStorage.theme = 'dark'
+    }
+})
+/* Dark or light mode end */

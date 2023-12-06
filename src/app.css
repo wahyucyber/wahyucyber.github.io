@@ -20,6 +20,6 @@
     }
 
     nav.navbar-fixed {
-        @apply fixed backdrop-blur-sm bg-white/30 shadow-sm;
+        @apply fixed backdrop-blur-sm bg-white/30 shadow-sm dark:bg-slate-900/70;
     }
 }
