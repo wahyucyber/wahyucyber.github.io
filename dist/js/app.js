@@ -17,8 +17,16 @@ $(window).on(`scroll`, function() {
 
     if (scrollTop > navbarScroll) {
         $(`nav`).addClass(`navbar-fixed`)
+        $(`#back-to-top`).addClass(`visible`).removeClass(`invisible`)
     }else {
         $(`nav`).removeClass(`navbar-fixed`)
+        $(`#back-to-top`).removeClass(`visible`).addClass(`invisible`)
     }
 })
 /* Navbar fixed end */
+
+/* Back to top start */
+$(document).on(`click`, `#back-to-top`, function() {
+    $(window).scrollTop(0)
+})
+/* Back to top end */
