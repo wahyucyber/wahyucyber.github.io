@@ -11,7 +11,7 @@ $(document).on(`click`, `div#backdrop-navbar`, function () {
 /* Hamburger menu end */
 
 /* Navbar fixed start */
-$(window).on(`scroll`, function() {
+const scrollPosition = () => {
     let scrollTop = $(window).scrollTop()
     let navbarScroll = $(`nav`).scrollTop() + 10
 
@@ -22,6 +22,12 @@ $(window).on(`scroll`, function() {
         $(`nav`).removeClass(`navbar-fixed`)
         $(`#back-to-top`).removeClass(`visible`).addClass(`invisible`)
     }
+}
+
+scrollPosition()
+
+$(window).on(`scroll`, function() {
+    scrollPosition()
 })
 /* Navbar fixed end */
 
