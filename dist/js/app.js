@@ -1,7 +1,12 @@
 /* Hamburger menu start */
 $(document).on(`click`, `nav #hamburger`, function () {
-    $(`nav #menu`).toggleClass(`invisible`);
+    $(`nav #menu, div#backdrop-navbar`).toggleClass(`invisible`);
     $(this).toggleClass(`active`);
+})
+
+$(document).on(`click`, `div#backdrop-navbar`, function () {
+    $(`nav #menu, div#backdrop-navbar`).addClass(`invisible`);
+    $(`nav #hamburger`).removeClass(`active`);
 })
 /* Hamburger menu end */
 
